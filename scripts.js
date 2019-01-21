@@ -16,6 +16,9 @@ frontRowApp.getMoviePoster = function(userMovie) {
     // console.log(data.results[0].poster_path);
     // console.log(data.results[0])
     frontRowApp.displayPoster(data.results[0]);
+  }).catch(function(error){
+    $('#error_message').empty();
+    $('#error_message').append(`<p>${userMovie} did not produce any results. Please use a new seach query.</p>`);
   });
 }
 
@@ -23,7 +26,7 @@ frontRowApp.displayPoster = function(poster){
   //building an html for each of the movie posters to display in our UI so we
   //store it in a variable called posterHtml
     //if the user movie has a poster
-
+console.log(poster);
     let posterPieceHtml = `
     <div class="piece">
       <h2>${poster.original_title}</h2>
@@ -42,7 +45,6 @@ frontRowApp.init = function() {
   $('.movieForm').on('submit', function(event){
     event.preventDefault();
     const userMovie = $('#term').val();
-    console.log(userMovie)
     const moviePoster = frontRowApp.getMoviePoster(userMovie);
 
   });
