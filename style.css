@@ -26,9 +26,17 @@ main {
 
 h1 {
   margin-top: 0;
+  margin-bottom: 0p
   font-size: 50px;
 }
 
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
 .piece {
   width: 100%;
   clear: both;
