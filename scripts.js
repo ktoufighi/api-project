@@ -26,7 +26,6 @@ frontRowApp.displayPoster = function(poster){
   //building an html for each of the movie posters to display in our UI so we
   //store it in a variable called posterHtml
     //if the user movie has a poster
-console.log(poster);
     let posterPieceHtml = `
     <div class="piece">
       <h2>${poster.original_title}</h2>
